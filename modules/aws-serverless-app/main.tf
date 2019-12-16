@@ -22,6 +22,8 @@ resource "aws_lambda_function" "web_app" {
   environment {
     variables = var.environment_variables
   }
+
+  tags = var.tags
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -31,6 +33,7 @@ resource "aws_lambda_function" "web_app" {
 resource "aws_iam_role" "lambda" {
   name               = var.name
   assume_role_policy = data.aws_iam_policy_document.lambda_role.json
+  tags               = var.tags
 }
 
 data "aws_iam_policy_document" "lambda_role" {
@@ -51,6 +54,7 @@ data "aws_iam_policy_document" "lambda_role" {
 
 resource "aws_api_gateway_rest_api" "proxy" {
   name = var.name
+  tags = var.tags
 }
 
 # ---------------------------------------------------------------------------------------------------------------------

@@ -56,3 +56,12 @@ variable "environment_variables" {
     EnvVarPlaceHolder = "Placeholder"
   }
 }
+
+variable "tags" {
+  description = "AWS tags applied to all resources"
+  type = map(string)
+  default = {
+    app = "terraform-talk-demo"
+    env = "demo"
+  }
+}
