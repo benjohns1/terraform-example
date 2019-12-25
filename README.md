@@ -21,3 +21,5 @@ In `app/deploy`
 ```shell script
 terraform destroy
 ```
+### Many thanks to [Yevgeniy Brikman](https://github.com/brikis98)
+For his excellent InfoQ talk [Automated Testing for Terraform, Docker, Packer, Kubernetes, and More](https://www.youtube.com/watch?v=xhHOW0EF5u8). This is a derivative of one of his examples: https://github.com/gruntwork-io/infrastructure-as-code-testing-talk.
